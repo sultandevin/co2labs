@@ -42,7 +42,7 @@ const HomeServicesSection = () => {
   return (
     <section className="bg-primary">
       <Container className="items-center gap-12">
-        <h1 className="font-heading text-5xl font-semibold text-white">
+        <h1 className="font-heading text-center text-5xl font-semibold text-white">
           About Us
         </h1>
         <div className="flex flex-wrap justify-center gap-4">
