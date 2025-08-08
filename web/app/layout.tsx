@@ -1,7 +1,7 @@
 import { body, heading } from "@/lib/fonts";
 import type { Metadata } from "next";
 import Footer from "./_modules/footer";
-import Navbar from "./_modules/navbar";
+import Navbar from "./_modules/navbar/navbar";
 import "./globals.css";
 import { MotionProvider } from "@/components/motion";
 
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${body.className} ${body.variable} ${heading.variable} antialiased`}
+        className={`${body.className} ${body.variable} bg-background ${heading.variable} antialiased`}
       >
         <MotionProvider>
           <Navbar />
