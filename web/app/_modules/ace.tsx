@@ -97,9 +97,9 @@ const Card = (props: {
     >
       <h1 className="text-3xl font-black">{props.name}</h1>
 
-      <h2 className="text-xl">{props.subtitle}</h2>
+      <h2 className="text-xl font-medium">{props.subtitle}</h2>
 
-      <div className="max-h-0 overflow-hidden pt-4 transition-all duration-300 ease-out group-hover:max-h-64">
+      <div className="max-h-0 space-y-2 overflow-hidden pt-4 font-medium transition-all duration-300 ease-out group-hover:max-h-64">
         {props.description}
       </div>
 

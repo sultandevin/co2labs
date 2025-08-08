@@ -24,7 +24,7 @@ const DesktopNav = (props: { links: NavigationLink[] }) => (
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent>
-                  <ul className="grid min-w-[600px] grid-cols-2 gap-4 p-1">
+                  <ul className="grid min-w-[800px] grid-cols-2 gap-4 p-1">
                     {link.children.map((child, childIndex) => (
                       <NavigationMenuLink key={childIndex} asChild>
                         <ListLinkItem {...child} />
@@ -73,18 +73,20 @@ const ListLinkItem = (props: {
   return (
     <Link
       href={props.href}
-      className="flex flex-row items-center gap-2 rounded-lg px-2 py-1 transition-colors hover:bg-neutral-100"
+      className="flex flex-row items-start gap-4 rounded-lg px-3 py-2 transition-colors hover:bg-neutral-100"
     >
       {props.logo && (
         <div
           className={`inline-flex items-center justify-center rounded-md p-2 ${props.logoClassName}`}
         >
-          <props.logo className="size-6" />
+          <props.logo className="size-10" />
         </div>
       )}
       <div>
-        <h4 className="font-semibold">{props.name}</h4>
-        {props.description && <p className="text-xs">{props.description}</p>}
+        <h4 className="text-lg/tight font-semibold">{props.name}</h4>
+        {props.description && (
+          <p className="text-xs font-medium">{props.description}</p>
+        )}
       </div>
     </Link>
   );

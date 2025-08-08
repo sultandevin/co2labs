@@ -89,7 +89,7 @@ const Card = (props: {
     className="flex h-96 w-72 flex-col items-center justify-between gap-6 rounded-xl bg-white p-4 text-center lg:w-full"
   >
     <div className="mt-4 flex flex-col items-center gap-5">
-      <div className="relative rounded-full bg-neutral-200 p-4">
+      <div className="bg-accent relative rounded-full p-4">
         <props.logo className="text-primary size-10" />
       </div>
 

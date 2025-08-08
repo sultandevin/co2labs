@@ -6,7 +6,7 @@ import Image from "next/image";
 const HomeAboutSection = () => {
   return (
     <Container className="relative items-center justify-center gap-12 lg:flex-row">
-      <div className="max-w-md space-y-4 lg:text-end">
+      <div className="max-w-lg space-y-4 lg:text-end">
         <m.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,6 +22,7 @@ const HomeAboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-lg font-medium"
         >
           At CO2 Labs, we strive to provide simple yet powerful software
           solutions and expert consultation to help your business thrive in the
