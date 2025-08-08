@@ -10,7 +10,7 @@ const ServiceCTASection = (props: Service) => {
         <div className="relative aspect-square w-full shrink-0 bg-neutral-200 lg:w-60"></div>
 
         <div className="space-y-4 p-6">
-          <h1 className="text-3xl font-bold">We're Here for You</h1>
+          <h1 className="text-3xl font-bold">We&apos;re Here for You</h1>
 
           <p className="mt-2 text-lg text-neutral-600">{props.cta.text}</p>
 

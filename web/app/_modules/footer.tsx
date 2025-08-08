@@ -63,7 +63,7 @@ const Footer = () => {
         <section className="flex justify-between gap-8 max-lg:flex-col">
           <div className="flex flex-col justify-between gap-4">
             <h1 className="text-2xl font-black">
-              Let's Grow Together with CO2 Labs
+              Let&apos;s Grow Together with CO2 Labs
             </h1>
 
             <div className="space-y-3">

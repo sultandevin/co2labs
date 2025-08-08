@@ -13,7 +13,7 @@ const ServiceHeroSection = (props: Service) => {
             {props.title}
           </h1>
 
-          <p className="text-lg font-medium">"{props.tagline}"</p>
+          <p className="text-lg font-medium">&quot;{props.tagline}&quot;</p>
 
           <div className="w-45 border-t-4 border-neutral-800" />
         </div>

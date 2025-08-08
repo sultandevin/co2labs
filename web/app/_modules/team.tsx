@@ -27,7 +27,7 @@ const TEAM_MEMBERS = [
 
 const HomeTeamSection = () => {
   return (
-    <Container className="mt-60 gap-18 py-20">
+    <Container className="mt-30 gap-18 py-20">
       <h1 className="font-heading text-5xl font-semibold">Our Team</h1>
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
         {TEAM_MEMBERS.map((member, i) => (
