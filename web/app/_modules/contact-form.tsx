@@ -43,7 +43,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4 rounded-lg p-12 shadow-lg">
+    <div className="flex flex-col gap-4 rounded-lg p-6 shadow-lg lg:p-12">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <h2 className="text-2xl font-bold">Hi there, how can we help?</h2>
