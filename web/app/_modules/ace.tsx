@@ -68,12 +68,14 @@ const CONTENT = [
 const HomeACESection = () => {
   return (
     <section>
-      <Container className="items-center gap-12">
+      <Container className="items-center gap-12 pt-20">
         <div className="space-y-2 text-center">
           <h1 className="font-heading text-5xl font-semibold">ACE</h1>
+
           <p className="font-semibold">Methodology for Strategic Consulting</p>
         </div>
       </Container>
+
       <section className="grid min-h-130 grid-cols-1 lg:grid-cols-3">
         {CONTENT.map((item, i) => (
           <Card key={item.name} idx={i} {...item} />
@@ -97,7 +99,7 @@ const Card = (props: {
 
       <h2 className="text-xl">{props.subtitle}</h2>
 
-      <div className="max-h-0 overflow-hidden pt-4 transition-transform group-hover:max-h-120">
+      <div className="max-h-0 overflow-hidden pt-4 transition-all duration-300 ease-out group-hover:max-h-64">
         {props.description}
       </div>
 

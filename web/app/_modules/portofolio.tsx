@@ -62,7 +62,7 @@ const Card = (props: { name: string; src: string; href: string }) => (
         src={`/images/home/hero.png`}
         alt={props.name}
         fill
-        className="object-cover transition-transform group-hover:scale-105"
+        className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
       />
     </div>
 

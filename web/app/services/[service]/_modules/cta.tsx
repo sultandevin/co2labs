@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 const ServiceCTASection = (props: Service) => {
   return (
     <Container className="lg:flex-row lg:items-center">
-      <div className="flex gap-4 overflow-clip rounded-lg shadow-xl max-lg:flex-col">
+      <div className="flex gap-4 overflow-clip rounded-lg shadow-xl max-lg:flex-col lg:items-center">
         <div className="relative aspect-square w-full shrink-0 bg-neutral-200 lg:w-60"></div>
 
         <div className="space-y-4 p-6">
@@ -14,9 +14,9 @@ const ServiceCTASection = (props: Service) => {
 
           <p className="mt-2 text-lg text-neutral-600">{props.cta.text}</p>
 
-          <Button variant={`secondary`}>
+          <Button variant={`secondary`} className="group">
             {props.cta.buttonText}
-            <ArrowRight />
+            <ArrowRight className="transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
       </div>

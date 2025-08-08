@@ -1,4 +1,5 @@
 import Container from "@/components/container";
+import { MotionDiv, MotionH1, MotionP, MotionSVG } from "@/components/motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -6,18 +7,37 @@ const HomeAboutSection = () => {
   return (
     <Container className="relative items-center justify-center gap-12 lg:flex-row">
       <div className="max-w-md space-y-4 lg:text-end">
-        <h1 className="font-heading text-5xl font-semibold">About Us</h1>
+        <MotionH1
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="font-heading text-5xl font-semibold"
+        >
+          About Us
+        </MotionH1>
 
-        <p>
+        <MotionP
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
           At CO2 Labs, we strive to provide simple yet powerful software
           solutions and expert consultation to help your business thrive in the
           digital world.
-        </p>
+        </MotionP>
 
         <Line />
       </div>
 
-      <div className="relative aspect-video h-auto overflow-clip rounded-lg max-sm:w-full sm:h-60">
+      <MotionDiv
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="relative aspect-video h-auto overflow-clip rounded-lg max-sm:w-full sm:h-60"
+      >
         <Image
           src={`/images/home/about.jpeg`}
           alt="About Image"
@@ -25,7 +45,7 @@ const HomeAboutSection = () => {
           fill
           className="object-cover"
         />
-      </div>
+      </MotionDiv>
 
       <div id="about" className="absolute -top-40" />
     </Container>
@@ -33,7 +53,11 @@ const HomeAboutSection = () => {
 };
 
 const Line = (props: { className?: string }) => (
-  <svg
+  <MotionSVG
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay: 0.2 }}
     className={cn("w-full max-w-[600px]", props.className)}
     height="81"
     viewBox="0 0 710 81"
@@ -46,7 +70,7 @@ const Line = (props: { className?: string }) => (
       strokeWidth="20"
       strokeLinecap="round"
     ></path>
-  </svg>
+  </MotionSVG>
 );
 
 export default HomeAboutSection;

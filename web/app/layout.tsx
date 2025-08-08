@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
-import "./globals.css";
 import { body, heading } from "@/lib/fonts";
-import Navbar from "./_modules/navbar";
+import type { Metadata } from "next";
 import Footer from "./_modules/footer";
+import Navbar from "./_modules/navbar";
+import "./globals.css";
+import { MotionProvider } from "@/components/motion";
 
 export const metadata: Metadata = {
   title: "CO2 Labs ",
@@ -17,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${body.className} ${heading.variable} antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <MotionProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   );
