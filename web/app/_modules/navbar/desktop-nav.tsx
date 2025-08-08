@@ -14,12 +14,12 @@ import { LucideIcon } from "lucide-react";
 const DesktopNav = (props: { links: NavigationLink[] }) => (
   <>
     <NavigationMenu viewport={false} className="hidden lg:flex">
-      <NavigationMenuList className="gap-3">
+      <NavigationMenuList className="gap-10">
         {props.links.map((link, index) => (
           <NavigationMenuItem key={index}>
             {link.children ? (
               <>
-                <NavigationMenuTrigger className="text-lg font-medium">
+                <NavigationMenuTrigger className="px-0 text-xl font-medium hover:bg-transparent data-[state=open]:bg-transparent data-[state=open]:hover:bg-transparent">
                   {link.name}
                 </NavigationMenuTrigger>
 
@@ -36,7 +36,7 @@ const DesktopNav = (props: { links: NavigationLink[] }) => (
             ) : (
               <NavigationMenuLink
                 href={link.href}
-                className="text-lg font-medium"
+                className="px-0 text-xl font-medium hover:bg-transparent"
               >
                 {link.name}
               </NavigationMenuLink>
@@ -73,7 +73,7 @@ const ListLinkItem = (props: {
   return (
     <Link
       href={props.href}
-      className="flex flex-row items-start gap-4 rounded-lg px-3 py-2 transition-colors hover:bg-neutral-100"
+      className="hover:bg-accent flex flex-row items-start gap-4 rounded-lg px-3 py-2 transition-colors"
     >
       {props.logo && (
         <div

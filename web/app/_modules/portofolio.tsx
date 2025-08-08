@@ -4,27 +4,27 @@ import Link from "next/link";
 
 const PROJECTS = [
   {
-    src: "/images/home/hero.png",
+    src: "aotc.png",
     name: "AOTC Cosmetics",
     href: "https://aotccosmetics.com",
   },
   {
-    src: "/images/home/hero.png",
+    src: "nosh.png",
     name: "Nosh Kitchen Website",
     href: "https://noshkitchen.com.sg",
   },
   {
-    src: "/images/home/hero.png",
+    src: "michelah.png",
     name: "Michelah Event Organizer Singapore",
     href: "https://michelah.com",
   },
   {
-    src: "/images/home/hero.png",
+    src: "studio.png",
     name: "Joywaltzstudio Academy",
     href: "https://pianistprodigy.com/",
   },
   {
-    src: "/images/home/hero.png",
+    src: "octopay.png",
     name: "Octopay Payment",
     href: "https://octopay.asia",
   },
@@ -59,7 +59,7 @@ const Card = (props: { name: string; src: string; href: string }) => (
   >
     <div className="relative aspect-square w-full overflow-clip rounded-lg">
       <Image
-        src={`/images/home/hero.png`}
+        src={`/images/home/portofolio/${props.src}`}
         alt={props.name}
         fill
         className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"

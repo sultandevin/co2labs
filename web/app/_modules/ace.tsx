@@ -104,7 +104,7 @@ const Card = (props: {
       </div>
 
       <ChevronDown
-        className={`${props.idx % 2 === 0 ? "text-muted-foreground" : "text-neutral-300"} mx-auto mt-8 size-8 transition-transform group-hover:rotate-180`}
+        className={`${props.idx % 2 === 0 ? "text-muted-foreground" : "text-neutral-300"} mx-auto mt-8 size-15 scale-x-150 transition-transform group-hover:rotate-180`}
       />
     </div>
   );

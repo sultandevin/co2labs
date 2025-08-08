@@ -14,17 +14,17 @@ const ServiceHeroSection = (props: Service) => {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative z-20 flex max-w-md flex-col gap-4"
+          className="relative z-20 flex max-w-xl flex-col gap-4"
         >
           <h1 className="font-heading z-10 text-4xl/tight font-bold lg:text-5xl/tight">
             {props.title}
           </h1>
 
-          <p className="z-10 text-lg font-medium">
+          <p className="z-10 text-xl font-medium">
             &quot;{props.tagline}&quot;
           </p>
 
-          <div className="z-10 w-45 border-t-4 border-neutral-800" />
+          <div className="z-10 w-45 border-t-4 border-black" />
 
           <div className="absolute -top-12 -left-12">
             <Image

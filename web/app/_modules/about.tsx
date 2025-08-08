@@ -37,7 +37,7 @@ const HomeAboutSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="relative aspect-video h-auto overflow-clip rounded-lg max-sm:w-full sm:h-60"
+        className="relative aspect-[4/3] h-auto overflow-clip rounded-lg max-sm:w-full sm:w-1/2 sm:max-w-xl"
       >
         <Image
           src={`/images/home/about.jpeg`}

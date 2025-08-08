@@ -23,7 +23,7 @@ const HomeContactSection = () => {
       <div className="flex w-full flex-wrap items-center justify-between gap-8">
         <h1 className="font-heading text-5xl font-semibold">Contact Us</h1>
 
-        <div className="flex gap-6">
+        <div className="flex gap-12">
           {BUTTONS.map((button, i) => (
             <a
               key={i}
@@ -38,7 +38,7 @@ const HomeContactSection = () => {
         </div>
       </div>
 
-      <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2">
+      <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-28">
         <ContactForm />
 
         <div className="relative rounded-lg shadow-lg max-lg:h-100">

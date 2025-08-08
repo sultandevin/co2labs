@@ -6,7 +6,7 @@ const ServiceAdvantageSection = (props: Service) => {
     <Container className="grid grid-cols-1 py-20 max-lg:gap-12 lg:grid-cols-2">
       <h1 className="font-heading text-4xl font-semibold">OUR ADVANTAGES</h1>
 
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-7">
         {props.advantages.map((advantage, index) => (
           <ListItem key={index} {...advantage} />
         ))}
@@ -19,13 +19,13 @@ const ListItem = (props: Service["advantages"][number]) => {
   return (
     <div className="space-y-3">
       <h2 className="flex items-center gap-4 text-3xl font-black">
-        <div className="size-6 shrink-0 rounded-full bg-neutral-200" />
+        <div className="size-6 shrink-0 rounded-full bg-gray-400" />
 
         {props.title}
       </h2>
 
       <div className="flex gap-4">
-        <div className="mx-3 border-l-2 border-neutral-200" />
+        <div className="mx-3 border-l-2 border-gray-400" />
 
         <div className="rounded-lg p-4 shadow-lg">
           <p>{props.description}</p>
