@@ -139,7 +139,7 @@ const ContactForm = () => {
             )}
           />
 
-          <Button type="submit" className="mt-4">
+          <Button type="submit" size={`lg`} className="mt-4">
             Send
           </Button>
         </form>
