@@ -18,7 +18,7 @@ const HomeHeroSection = () => {
             your business needs.
           </p>
 
-          <Button className="w-fit" asChild>
+          <Button size={`lg`} transition={`scale`} className="w-fit" asChild>
             <Link href="/">Get a free consult</Link>
           </Button>
         </div>

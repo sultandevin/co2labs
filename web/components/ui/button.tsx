@@ -24,13 +24,19 @@ const buttonVariants = cva(
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
-        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
+        lg: "h-10 rounded-md px-6 has-[>svg]:px-4 text-base",
         icon: "size-9",
+      },
+      transition: {
+        default: "",
+        scale:
+          "transition-transform hover:scale-110 hover:shadow-lg active:scale-95",
       },
     },
     defaultVariants: {
       variant: "default",
       size: "default",
+      transition: "default",
     },
   },
 );
@@ -39,6 +45,7 @@ function Button({
   className,
   variant,
   size,
+  transition,
   asChild = false,
   ...props
 }: React.ComponentProps<"button"> &
@@ -50,7 +57,7 @@ function Button({
   return (
     <Comp
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ variant, size, transition, className }))}
       {...props}
     />
   );

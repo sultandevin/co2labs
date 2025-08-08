@@ -8,7 +8,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Code, Diamond, GitGraph, SlidersHorizontal } from "lucide-react";
+import { Code, Diamond, GitGraph, Menu, SlidersHorizontal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { LucideIcon } from "lucide-react";
@@ -53,42 +53,57 @@ const NAV_LINKS = [
 
 const Navbar = () => {
   return (
-    <nav className="fixed flex h-20 w-screen items-center bg-white shadow-md">
+    <nav className="fixed z-50 flex h-20 w-screen items-center bg-white shadow-md">
       <Container className="flex-row items-center justify-between py-0">
         <Link href={`/`}>
-          <Image src={`/images/logo.png`} alt="Logo" width={50} height={50} />
+          <Image src={`/images/logo.png`} alt="Logo" width={65} height={65} />
         </Link>
-        <NavigationMenu viewport={false}>
-          <NavigationMenuList>
-            {NAV_LINKS.map((link, index) => (
-              <NavigationMenuItem key={index}>
-                {link.children ? (
-                  <>
-                    <NavigationMenuTrigger>{link.name}</NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="grid min-w-[600px] grid-cols-2 gap-4">
-                        {link.children.map((child, childIndex) => (
-                          <NavigationMenuLink key={childIndex} asChild>
-                            <ListLinkItem {...child} />
-                          </NavigationMenuLink>
-                        ))}
-                      </ul>
-                    </NavigationMenuContent>
-                  </>
-                ) : (
-                  <NavigationMenuLink href={link.href}>
-                    {link.name}
-                  </NavigationMenuLink>
-                )}
-              </NavigationMenuItem>
-            ))}
-          </NavigationMenuList>
-        </NavigationMenu>
-        <Button>Get Started Today!</Button>
+
+        <DesktopNav />
+        <MobileNav />
       </Container>
     </nav>
   );
 };
+
+const DesktopNav = () => (
+  <>
+    <NavigationMenu viewport={false} className="hidden lg:flex">
+      <NavigationMenuList className="gap-3">
+        {NAV_LINKS.map((link, index) => (
+          <NavigationMenuItem key={index}>
+            {link.children ? (
+              <>
+                <NavigationMenuTrigger className="text-lg font-medium">
+                  {link.name}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid min-w-[600px] grid-cols-2 gap-4">
+                    {link.children.map((child, childIndex) => (
+                      <NavigationMenuLink key={childIndex} asChild>
+                        <ListLinkItem {...child} />
+                      </NavigationMenuLink>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </>
+            ) : (
+              <NavigationMenuLink
+                href={link.href}
+                className="text-lg font-medium"
+              >
+                {link.name}
+              </NavigationMenuLink>
+            )}
+          </NavigationMenuItem>
+        ))}
+      </NavigationMenuList>
+    </NavigationMenu>
+    <Button transition={`scale`} size={`lg`} className="hidden lg:inline-flex">
+      Get Started Today!
+    </Button>
+  </>
+);
 
 const ListLinkItem = (props: {
   name: string;
@@ -110,5 +125,11 @@ const ListLinkItem = (props: {
     </Link>
   );
 };
+
+const MobileNav = () => (
+  <Button size={`icon`} variant={`ghost`} className="size-12 lg:hidden">
+    <Menu className="size-8" strokeWidth={3} />
+  </Button>
+);
 
 export default Navbar;

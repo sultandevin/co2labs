@@ -4,6 +4,7 @@ import HomeContactSection from "./_modules/contact";
 import HomeHeroSection from "./_modules/hero";
 import HomePortofolioSection from "./_modules/portofolio";
 import HomeServicesSection from "./_modules/services";
+import HomeTeamSection from "./_modules/team";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HomeServicesSection />
       <HomeACESection />
       <HomeAboutSection />
+      <HomeTeamSection />
       <HomePortofolioSection />
       <HomeContactSection />
     </>

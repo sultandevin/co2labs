@@ -1,26 +1,32 @@
 import Container from "@/components/container";
 import Image from "next/image";
+import Link from "next/link";
 
 const PROJECTS = [
   {
     src: "/images/home/hero.png",
     name: "AOTC Cosmetics",
+    href: "https://aotccosmetics.com",
   },
   {
     src: "/images/home/hero.png",
     name: "Nosh Kitchen Website",
+    href: "https://noshkitchen.com.sg",
   },
   {
     src: "/images/home/hero.png",
     name: "Michelah Event Organizer Singapore",
+    href: "https://michelah.com",
   },
   {
     src: "/images/home/hero.png",
     name: "Joywaltzstudio Academy",
+    href: "https://pianistprodigy.com/",
   },
   {
     src: "/images/home/hero.png",
     name: "Octopay Payment",
+    href: "https://octopay.asia",
   },
 ];
 
@@ -32,7 +38,7 @@ const HomePortofolioSection = () => {
           Our Portofolio
         </h1>
 
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-4">
           {PROJECTS.map((project, i) => (
             <Card key={i} {...project} />
           ))}
@@ -42,19 +48,24 @@ const HomePortofolioSection = () => {
   );
 };
 
-const Card = (props: { name: string; src: string }) => (
-  <div className="flex flex-col gap-2 text-white">
-    <div className="relative aspect-square h-60 overflow-clip rounded-lg">
+const Card = (props: { name: string; src: string; href: string }) => (
+  <Link
+    href={props.href}
+    rel="noopener noreferrer"
+    target="_blank"
+    className="group flex w-70 flex-col gap-2 rounded-lg p-2 text-white"
+  >
+    <div className="relative aspect-square w-full overflow-clip rounded-lg">
       <Image
         src={`/images/home/hero.png`}
         alt={props.name}
         fill
-        className="object-cover"
+        className="object-cover transition-transform group-hover:scale-105"
       />
     </div>
 
     <h3 className="text-lg font-semibold">{props.name}</h3>
-  </div>
+  </Link>
 );
 
 export default HomePortofolioSection;

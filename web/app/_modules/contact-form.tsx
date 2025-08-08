@@ -140,7 +140,9 @@ const ContactForm = () => {
             )}
           />
 
-          <Button type="submit">Send</Button>
+          <Button type="submit" className="mt-4">
+            Send
+          </Button>
         </form>
       </Form>
     </div>
