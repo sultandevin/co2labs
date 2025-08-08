@@ -25,7 +25,7 @@ const ServiceLabsSection = (props: Service) => {
           </div>
         </div>
 
-        <p className="mb-8 text-lg font-medium text-white lg:text-end">
+        <p className="mb-8 text-center text-lg font-medium text-white lg:text-end">
           {props.labs}
         </p>
       </Container>
