@@ -9,12 +9,18 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Code, Diamond, GitGraph, Menu, SlidersHorizontal } from "lucide-react";
+import { cn } from "@/lib/utils";
+import {
+  Code,
+  Diamond,
+  GitGraph,
+  LucideIcon,
+  Menu,
+  SlidersHorizontal,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { LucideIcon } from "lucide-react";
 import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   {
@@ -85,7 +91,7 @@ const Navbar = () => {
     >
       <Container className="flex-row items-center justify-between py-0">
         <Link href={`/`}>
-          <Image src={`/images/logo.png`} alt="Logo" width={65} height={65} />
+          <Image src={`/images/logo.png`} alt="Logo" width={60} height={60} />
         </Link>
 
         <DesktopNav />
@@ -106,6 +112,7 @@ const DesktopNav = () => (
                 <NavigationMenuTrigger className="text-lg font-medium">
                   {link.name}
                 </NavigationMenuTrigger>
+
                 <NavigationMenuContent>
                   <ul className="grid min-w-[600px] grid-cols-2 gap-4 p-1">
                     {link.children.map((child, childIndex) => (
@@ -128,6 +135,7 @@ const DesktopNav = () => (
         ))}
       </NavigationMenuList>
     </NavigationMenu>
+
     <Button
       transition={`scale`}
       size={`lg`}
@@ -172,10 +180,16 @@ const ListLinkItem = (props: {
   );
 };
 
-const MobileNav = () => (
-  <Button size={`icon`} variant={`ghost`} className="size-12 lg:hidden">
-    <Menu className="size-8" strokeWidth={3} />
-  </Button>
-);
+const MobileNav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <Button size={`icon`} variant={`ghost`} className="size-12 lg:hidden">
+        <Menu className="size-8" strokeWidth={3} />
+      </Button>
+    </>
+  );
+};
 
 export default Navbar;

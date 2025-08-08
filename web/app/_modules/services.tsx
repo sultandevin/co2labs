@@ -1,6 +1,6 @@
 "use client";
 import Container from "@/components/container";
-import { MotionDiv } from "@/components/motion";
+import * as m from "@/components/motion";
 import {
   Code,
   Diamond,
@@ -79,7 +79,7 @@ const Card = (props: {
   href: string;
   logo: LucideIcon;
 }) => (
-  <MotionDiv
+  <m.div
     variants={itemVariants}
     custom={props.idx}
     initial="hidden"
@@ -99,7 +99,7 @@ const Card = (props: {
     <Link href={props.href} className="font-bold underline">
       Learn More
     </Link>
-  </MotionDiv>
+  </m.div>
 );
 
 export default HomeServicesSection;

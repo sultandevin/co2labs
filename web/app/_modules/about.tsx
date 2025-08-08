@@ -1,5 +1,5 @@
 import Container from "@/components/container";
-import { MotionDiv, MotionH1, MotionP, MotionSVG } from "@/components/motion";
+import * as m from "@/components/motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -7,7 +7,7 @@ const HomeAboutSection = () => {
   return (
     <Container className="relative items-center justify-center gap-12 lg:flex-row">
       <div className="max-w-md space-y-4 lg:text-end">
-        <MotionH1
+        <m.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -15,9 +15,9 @@ const HomeAboutSection = () => {
           className="font-heading text-5xl font-semibold"
         >
           About Us
-        </MotionH1>
+        </m.h1>
 
-        <MotionP
+        <m.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -26,12 +26,12 @@ const HomeAboutSection = () => {
           At CO2 Labs, we strive to provide simple yet powerful software
           solutions and expert consultation to help your business thrive in the
           digital world.
-        </MotionP>
+        </m.p>
 
         <Line />
       </div>
 
-      <MotionDiv
+      <m.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -45,7 +45,7 @@ const HomeAboutSection = () => {
           fill
           className="object-cover"
         />
-      </MotionDiv>
+      </m.div>
 
       <div id="about" className="absolute -top-40" />
     </Container>
@@ -53,7 +53,7 @@ const HomeAboutSection = () => {
 };
 
 const Line = (props: { className?: string }) => (
-  <MotionSVG
+  <m.svg
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
@@ -70,7 +70,7 @@ const Line = (props: { className?: string }) => (
       strokeWidth="20"
       strokeLinecap="round"
     ></path>
-  </MotionSVG>
+  </m.svg>
 );
 
 export default HomeAboutSection;

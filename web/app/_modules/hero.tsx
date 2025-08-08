@@ -1,8 +1,8 @@
 import Container from "@/components/container";
-import { MotionDiv } from "@/components/motion";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import * as m from "@/components/motion";
 
 const HomeHeroSection = () => {
   return (
@@ -10,35 +10,46 @@ const HomeHeroSection = () => {
       <div className="h-20" />
 
       <Container className="relative min-h-[calc(100vh-5rem)] flex-col-reverse justify-center lg:flex-row lg:items-center lg:justify-between">
-        <MotionDiv
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="z-20 flex max-w-lg flex-col gap-4"
-        >
-          <h1 className="font-heading text-4xl/tight font-bold lg:text-5xl/tight">
-            Where Code Meets{" "}
-            <span className="bg-primary text-background px-4">Creativity</span>
-          </h1>
+        <div className="z-20 flex max-w-lg flex-col gap-4">
+          <m.div
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col gap-2"
+          >
+            <h1 className="font-heading text-4xl/tight font-bold lg:text-5xl/tight">
+              Where Code Meets{" "}
+              <span className="bg-primary text-background px-4">
+                Creativity
+              </span>
+            </h1>
 
-          <p className="text-lg font-medium">
-            Harnessing the power of our Coding Collective to build solutions for
-            your business needs.
-          </p>
+            <p className="text-lg font-medium">
+              Harnessing the power of our Coding Collective to build solutions
+              for your business needs.
+            </p>
+          </m.div>
 
-          <Button size={`lg`} transition={`scale`} className="w-fit" asChild>
-            <Link
-              href="https://api.whatsapp.com/send/?phone=6581181595&text=Hi+Co2%2C+I+would+like+ask+about+your+services.&type=phone_number&app_absent=0"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Get a free consult
-            </Link>
-          </Button>
-        </MotionDiv>
+          <m.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Button size={`lg`} transition={`scale`} className="w-fit" asChild>
+              <Link
+                href="https://api.whatsapp.com/send/?phone=6581181595&text=Hi+Co2%2C+I+would+like+ask+about+your+services.&type=phone_number&app_absent=0"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Get a free consult
+              </Link>
+            </Button>
+          </m.div>
+        </div>
 
-        <MotionDiv
+        <m.div
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -52,7 +63,7 @@ const HomeHeroSection = () => {
             fill
             className="object-cover"
           />
-        </MotionDiv>
+        </m.div>
 
         <Image
           src={`/images/backdrop.png`}

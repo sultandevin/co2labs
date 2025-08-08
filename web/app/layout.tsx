@@ -17,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${body.className} ${heading.variable} antialiased`}>
+      <body
+        className={`${body.className} ${body.variable} ${heading.variable} antialiased`}
+      >
         <MotionProvider>
           <Navbar />
           {children}

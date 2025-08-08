@@ -19,7 +19,7 @@ const ListItem = (props: Service["advantages"][number]) => {
   return (
     <div className="space-y-3">
       <h2 className="flex items-center gap-4 text-3xl font-black">
-        <div className="size-6 rounded-full bg-neutral-200" />
+        <div className="size-6 shrink-0 rounded-full bg-neutral-200" />
 
         {props.title}
       </h2>

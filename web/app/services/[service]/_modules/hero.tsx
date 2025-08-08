@@ -1,5 +1,5 @@
 import Container from "@/components/container";
-import { MotionDiv } from "@/components/motion";
+import * as m from "@/components/motion";
 import { Service } from "@/lib/helpers/services";
 import Image from "next/image";
 
@@ -9,23 +9,35 @@ const ServiceHeroSection = (props: Service) => {
       <div className="h-20" />
 
       <Container className="relative min-h-[calc(100vh-5rem)] flex-col-reverse justify-center lg:flex-row lg:items-center lg:justify-between">
-        <MotionDiv
+        <m.div
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="z-20 flex max-w-md flex-col gap-4"
+          className="relative z-20 flex max-w-md flex-col gap-4"
         >
-          <h1 className="font-heading text-4xl/tight font-bold lg:text-5xl/tight">
+          <h1 className="font-heading z-10 text-4xl/tight font-bold lg:text-5xl/tight">
             {props.title}
           </h1>
 
-          <p className="text-lg font-medium">&quot;{props.tagline}&quot;</p>
+          <p className="z-10 text-lg font-medium">
+            &quot;{props.tagline}&quot;
+          </p>
 
-          <div className="w-45 border-t-4 border-neutral-800" />
-        </MotionDiv>
+          <div className="z-10 w-45 border-t-4 border-neutral-800" />
 
-        <MotionDiv
+          <div className="absolute -top-12 -left-12">
+            <Image
+              src={`/images/services/quote.png`}
+              alt="Quote"
+              width={100}
+              height={100}
+              className="z-0"
+            />
+          </div>
+        </m.div>
+
+        <m.div
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -39,7 +51,7 @@ const ServiceHeroSection = (props: Service) => {
             fill
             className="object-cover"
           />
-        </MotionDiv>
+        </m.div>
 
         <Image
           src={`/images/backdrop.png`}
