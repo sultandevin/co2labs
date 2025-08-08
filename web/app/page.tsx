@@ -8,7 +8,7 @@ import HomeTeamSection from "./_modules/team";
 
 export default function Home() {
   return (
-    <main className="scroll-smooth">
+    <>
       <HomeHeroSection />
       <HomeServicesSection />
       <HomeACESection />
@@ -16,6 +16,6 @@ export default function Home() {
       <HomeTeamSection />
       <HomePortofolioSection />
       <HomeContactSection />
-    </main>
+    </>
   );
 }
