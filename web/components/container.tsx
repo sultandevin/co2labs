@@ -1,16 +1,19 @@
 import { cn } from "@/lib/utils";
 
 const Container = ({
+  id,
   className,
   children,
 }: {
+  id?: string;
   className?: string;
   children?: React.ReactNode;
 }) => {
   return (
     <section
+      id={id}
       className={cn(
-        `mx-auto flex w-full max-w-7xl flex-col gap-4 px-6 py-10 sm:px-8 lg:px-28`,
+        `mx-auto flex w-full flex-col gap-4 px-6 py-10 sm:px-8 lg:px-28`,
         className,
       )}
     >

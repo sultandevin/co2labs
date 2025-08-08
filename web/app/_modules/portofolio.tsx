@@ -32,7 +32,7 @@ const PROJECTS = [
 
 const HomePortofolioSection = () => {
   return (
-    <section className="bg-primary">
+    <section className="bg-primary relative">
       <Container className="gap-12 py-18">
         <h1 className="font-heading text-5xl font-semibold text-white">
           Our Portofolio
@@ -44,6 +44,8 @@ const HomePortofolioSection = () => {
           ))}
         </div>
       </Container>
+
+      <div id="portofolio" className="absolute -top-20" />
     </section>
   );
 };

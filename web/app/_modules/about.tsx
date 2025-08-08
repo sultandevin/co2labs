@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const HomeAboutSection = () => {
   return (
-    <Container className="items-center justify-center gap-12 lg:flex-row">
+    <Container className="relative items-center justify-center gap-12 lg:flex-row">
       <div className="max-w-md space-y-4 lg:text-end">
         <h1 className="font-heading text-5xl font-semibold">About Us</h1>
 
@@ -17,21 +17,24 @@ const HomeAboutSection = () => {
         <Line />
       </div>
 
-      <div className="relative aspect-video h-60 overflow-clip rounded-lg">
+      <div className="relative aspect-video h-auto overflow-clip rounded-lg max-sm:w-full sm:h-60">
         <Image
           src={`/images/home/about.jpeg`}
           alt="About Image"
+          sizes="100%"
           fill
           className="object-cover"
         />
       </div>
+
+      <div id="about" className="absolute -top-40" />
     </Container>
   );
 };
 
 const Line = (props: { className?: string }) => (
   <svg
-    className={cn("w-full xl:w-[600px]", props.className)}
+    className={cn("w-full max-w-[600px]", props.className)}
     height="81"
     viewBox="0 0 710 81"
     fill="none"

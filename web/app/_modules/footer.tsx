@@ -60,7 +60,7 @@ const Footer = () => {
   return (
     <footer className="bg-neutral-900 text-white">
       <Container className="">
-        <section className="flex justify-between gap-8">
+        <section className="flex justify-between gap-8 max-lg:flex-col">
           <div className="flex flex-col justify-between gap-4">
             <h1 className="text-2xl font-black">
               Let's Grow Together with CO2 Labs
@@ -90,7 +90,7 @@ const Footer = () => {
                   <li key={i}>
                     <Link
                       href={link.href}
-                      className="hover:text-muted-foreground/80 flex items-center transition-colors"
+                      className="hover:text-muted-foreground/80 flex items-center transition-colors hover:underline"
                     >
                       {link.name}
                     </Link>
@@ -106,7 +106,7 @@ const Footer = () => {
                   <li key={i}>
                     <Link
                       href={link.href}
-                      className="hover:text-muted-foreground/80 flex items-center transition-colors"
+                      className="hover:text-muted-foreground/80 flex items-center transition-colors hover:underline"
                     >
                       {link.name}
                     </Link>
@@ -122,7 +122,7 @@ const Footer = () => {
                   <li key={i}>
                     <Link
                       href={link.href}
-                      className="hover:text-muted-foreground/80 flex items-center transition-colors"
+                      className="hover:text-muted-foreground/80 flex items-center transition-colors hover:underline"
                     >
                       <link.icon className="mr-2 inline size-4" />
                       {link.name}
@@ -138,8 +138,12 @@ const Footer = () => {
           <h5 className="">© 2024 CO2 Labs. All rights reserved.</h5>
 
           <div className="flex gap-2">
-            <Link href={`/faq`}>FAQ</Link>
-            <Link href={`/privacy-policy`}>Terms & Policy</Link>
+            <Link href={`/faq`} className="hover:underline">
+              FAQ
+            </Link>
+            <Link href={`/privacy-policy`} className="hover:underline">
+              Terms & Policy
+            </Link>
           </div>
         </div>
       </Container>

@@ -19,8 +19,8 @@ const BUTTONS = [
 
 const HomeContactSection = () => {
   return (
-    <Container className="items-center gap-20 py-24">
-      <div className="flex w-full items-center justify-between gap-8">
+    <Container className="relative items-center gap-20 py-24">
+      <div className="flex w-full flex-wrap items-center justify-between gap-8">
         <h1 className="font-heading text-5xl font-semibold">Contact Us</h1>
 
         <div className="flex gap-6">
@@ -30,7 +30,7 @@ const HomeContactSection = () => {
               href={button.href}
               target="_blank"
               rel="noopener noreferrer"
-              className=""
+              className="transition-colors hover:text-black/60"
             >
               <button.icon className="size-12" />
             </a>
@@ -38,7 +38,7 @@ const HomeContactSection = () => {
         </div>
       </div>
 
-      <div className="grid w-full grid-cols-1 gap-4 px-12 lg:grid-cols-2">
+      <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2">
         <ContactForm />
 
         <div className="relative rounded-lg shadow-lg max-lg:h-100">
@@ -52,6 +52,8 @@ const HomeContactSection = () => {
           ></iframe>
         </div>
       </div>
+
+      <div id="contact" className="absolute -top-20" />
     </Container>
   );
 };

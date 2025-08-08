@@ -12,27 +12,27 @@ const CONTENT = [
   {
     logo: SlidersHorizontal,
     name: "Website Maintenance",
-    href: "/service/web-main",
+    href: "/services/web-main",
     description: "Keep your website running smoothly and securely",
   },
   {
     logo: Code,
     name: "Website & App Development",
-    href: "/service/",
+    href: "/services/web-dev",
     description:
       "Transform your online presence with our custom platform design solutions",
   },
   {
     logo: GitGraph,
     name: "IT Support",
-    href: "/service/",
+    href: "/services/it-support",
     description:
       "Experience peace of mind with our reliable IT support services",
   },
   {
     logo: Diamond,
     name: "3rd Party AI Solution",
-    href: "/service/",
+    href: "/services/ai-solution",
     description:
       "Leverage our expertise to find the best third-party services for your business",
   },
@@ -41,9 +41,9 @@ const CONTENT = [
 const HomeServicesSection = () => {
   return (
     <section className="bg-primary">
-      <Container className="items-center gap-12">
+      <Container className="items-center gap-12 py-20">
         <h1 className="font-heading text-center text-5xl font-semibold text-white">
-          About Us
+          Our Services
         </h1>
         <div className="flex flex-wrap justify-center gap-4">
           {CONTENT.map((item) => (
@@ -64,7 +64,7 @@ const Card = (props: {
   <div className="flex w-60 flex-col items-center justify-between gap-6 rounded-lg bg-white p-4 text-center">
     <div className="mt-4 flex flex-col items-center gap-3">
       <div className="relative rounded-full bg-neutral-200 p-4">
-        <props.logo className="size-8" />
+        <props.logo className="text-primary size-8" />
       </div>
       <h3 className="text-lg font-semibold">{props.name}</h3>
       <p className="">{props.description}</p>

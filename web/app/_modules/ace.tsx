@@ -74,7 +74,7 @@ const HomeACESection = () => {
           <p className="font-semibold">Methodology for Strategic Consulting</p>
         </div>
       </Container>
-      <section className="grid min-h-130 grid-cols-3">
+      <section className="grid min-h-130 grid-cols-1 lg:grid-cols-3">
         {CONTENT.map((item, i) => (
           <Card key={item.name} idx={i} {...item} />
         ))}
@@ -94,10 +94,13 @@ const Card = (props: {
       className={`group h-fit overflow-clip p-8 ${props.idx % 2 === 0 ? "bg-pink-100" : "bg-green-100"}`}
     >
       <h1 className="text-3xl font-black">{props.name}</h1>
+
       <h2 className="text-xl">{props.subtitle}</h2>
-      <div className="max-h-0 overflow-hidden pt-4 group-hover:line-clamp-none group-hover:max-h-none">
+
+      <div className="max-h-0 overflow-hidden pt-4 transition-transform group-hover:max-h-120">
         {props.description}
       </div>
+
       <ChevronDown
         className={`${props.idx % 2 === 0 ? "text-muted-foreground" : "text-neutral-300"} mx-auto mt-8 size-8 transition-transform group-hover:rotate-180`}
       />
