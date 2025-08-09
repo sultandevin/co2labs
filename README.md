@@ -36,7 +36,9 @@ docker compose up --build
 
 ## 🛠️ Tech Stack
 
+-   Node.js
 -   Next.js 15
 -   TailwindCSS
+-   Motion
 
 Deployed on [Vercel](https://vercel.com)
