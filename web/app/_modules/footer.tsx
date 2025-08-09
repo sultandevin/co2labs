@@ -137,7 +137,7 @@ const Footer = () => {
         <div className="text-muted-foreground mt-6 flex justify-between text-sm">
           <h5 className="">© 2024 CO2 Labs. All rights reserved.</h5>
 
-          <div className="flex gap-2">
+          <div className="flex gap-2 max-lg:flex-wrap">
             <Link href={`/faq`} className="hover:underline">
               FAQ
             </Link>

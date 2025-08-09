@@ -39,7 +39,7 @@ const HomeTeamSection = () => {
 };
 
 const ProfileCard = (props: (typeof TEAM_MEMBERS)[number]) => (
-  <div className="relative flex flex-col items-center gap-1 rounded-xl bg-white p-10 text-center transition-all lg:mt-20 lg:pt-24 lg:shadow-lg lg:hover:scale-110 hover:lg:shadow-2xl">
+  <div className="relative flex flex-col items-center gap-1 rounded-xl p-10 text-center transition-all lg:mt-20 lg:bg-white lg:pt-24 lg:shadow-lg lg:hover:scale-110 hover:lg:shadow-2xl">
     <div className="-top-20 lg:absolute">
       <div className="relative size-40 overflow-clip rounded-full bg-neutral-200 shadow-lg">
         <Image
